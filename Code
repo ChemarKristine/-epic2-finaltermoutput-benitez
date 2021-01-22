@@ -1,0 +1,230 @@
+const CIRCLE = 400
+const SIDES = 4
+const angle = 360 / SIDES
+
+
+const Bilog = 4
+const Bilogs = 360 / Bilog
+
+const Linya = 8
+const Linyas = 360 / Linya
+
+function setup() {
+  createCanvas(530, 530);
+  angleMode(DEGREES)
+  rectMode(CENTER)
+}
+
+function draw() {
+  background("#f368e0");
+  
+    
+    
+    //First Circle
+      
+    push()
+    translate(width/2, height/2)
+    strokeWeight(2);
+    ellipse(0, 0, 400, 400)
+    
+    
+    for (let i = 0; i < SIDES; i++) {
+     
+  //  line(0, 0, 0, 250)
+      
+      // Buka
+      push()
+      stroke('black');
+      fill('#f368e0')
+      ellipse(145, 145, 70, 70)
+      pop()
+      
+      push()
+      stroke('#f368e0');
+      fill('#f368e0')
+      ellipse(145, 170, 60, 40)
+      ellipse(170, 145, 40, 60)
+      pop()
+      
+      push()
+      stroke('black');
+      ellipse(145, 145, 40, 40)
+      pop()
+      
+      
+      push()
+      
+      bezier(0, 120, 0, 150, 0, 185, 35, 197);
+      bezier(0, 120, 0, 150, 0, 185, -35, 197);
+      
+      
+      bezier(0, 50, 0, 80, 0, 170, 70, 187);
+      bezier(0, 50, 0, 80, 0, 170, -70, 187);
+      
+    
+      pop()
+      
+     
+      push()
+      //1
+      arc(0, 140,50,100, 0,180);
+      //2
+      arc(37, 100,50,100, 0,180);
+      //3
+      arc(-37,100,50,100, 0,180);
+      pop()
+      
+      
+      push()
+      fill(255)
+      stroke(255)
+      ellipse(0, 129, 60, 40)
+      ellipse(0, 117, 60, 40)
+      pop()
+      
+      push()
+      
+      
+      ellipse(65, 105, 40, 35)
+      ellipse(-65, 105, 40, 35)
+      pop()
+      
+       
+       push()
+      
+      //1st stamen
+      line(0, 0, 0, 160)
+     
+      
+      
+      //2nd stamen
+      bezier(0, 0, 0, 75, 0, 120, 7, 140);
+      bezier(0, 0, 0, 75, 0, 120, -7, 140);
+      
+      //3rd stamen
+      bezier(0, 30, 0, 50, 0, 100, 20, 120);
+      bezier(0, 30, 0, 50, 0, 100, -20, 120);
+      pop()
+      
+      //pollens
+      push()
+      ellipse(21, 120, 5, 5)
+      ellipse(-21, 120, 5, 5)
+      
+      ellipse(9, 142, 5, 5)
+      ellipse(-9, 142, 5, 5)
+      
+      ellipse(0, 163, 5, 5)
+      pop()
+     
+      
+      //Hide Circles
+      push()
+      fill(255)
+      stroke(255)
+      
+      ellipse(55, 112, 15, 10)
+      ellipse(45, 117, 15, 10)
+      ellipse(55, 115, 10, 15)
+      
+      ellipse(-55, 112, 15, 10)
+      ellipse(-45, 117, 15, 10)
+      ellipse(-55, 115, 10, 15)
+      pop()
+      
+      
+      
+      push()
+      bezier(0, 30, 0, 50, 0, 100, 45, 110);
+      
+      bezier(0, 30, 0, 50, 0, 100, -45, 110);
+      pop()
+     
+          
+    rotate(angle)
+    }
+    
+    
+   
+    pop()
+    
+  
+  
+  
+  
+  
+  
+  
+   //Second to the Last Circle
+  // Circle with holes
+    push()
+    translate(width/2, height/2)
+    
+    push()
+    strokeWeight(2);
+    ellipse(0, 0, 100, 100)
+    pop()
+    
+    for (let i = 0; i < Bilog; i++) {
+     
+ //   line(0, 0, 0, 250)
+      
+      
+      
+      push()
+      fill('black')
+      ellipse(35, 35, 35, 35)
+      pop()
+      
+      push()
+      fill(255)
+      stroke(255)
+      ellipse(35, 35, 31, 31)
+      pop()
+      
+      
+      push()
+      fill(255)
+      stroke(255)
+      ellipse(34, 55, 31, 31)
+      ellipse(54, 35, 31, 31)
+      pop()
+        
+    
+      push()
+      strokeWeight(3);
+      line(0, 30, 0, 80)
+      pop()
+    rotate(Bilogs)
+    }
+ 
+    pop()
+  
+  
+  
+  
+    //Last Circle
+    push()
+    translate(width/2, height/2)
+    strokeWeight(2);
+    ellipse(0, 0, 30, 30)
+    
+    
+    for (let i = 0; i < Linya; i++) {
+    
+    
+      
+     //Guide lines 
+      
+   // line(0, 0, 0, 250)
+          
+    rotate(Linyas)
+    }
+    
+    
+   
+    pop()
+    
+  
+  
+}
